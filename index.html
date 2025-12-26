@@ -1,145 +1,32 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>컵밥 시뮬레이터</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  background-image: url("background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+<body>
+  <div class="game-container">
+    <div class="character-area">
+      <div class="character-name">선배</div>
+      <div class="character-face">(๑˃̵ᴗ˂̵)</div>
+    </div>
 
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    <div class="dialogue-box">
+      <div id="dialogue-text">로딩 중...</div>
+      <div id="choice-area" class="choice-area"></div>
+      <button id="next-btn" class="next-btn" style="display:none;">▶ 다음</button>
+    </div>
+  </div>
 
-/* =========================
-   게임 박스 (PC 기준)
-========================= */
-.game-container {
-  width: min(390px, 88vw);   /* PC 최대 390px / 모바일은 vw */
-  background: #ffffffcc;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  padding: 16px;
+  <div id="result-section" class="result-section" style="display:none;">
+    <h2>오늘 너에게 어울리는 컵밥은… 🍱</h2>
+    <p id="result-text"></p>
+    <button class="restart-btn" onclick="location.reload()">다시 하기</button>
+  </div>
 
-  margin-left: 700px;        /* PC에서 오른쪽 */
-  transform: translateY(20px); /* 살짝 아래 */
-}
-
-/* 캐릭터 영역 */
-.character-area {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.character-name {
-  font-size: 14px;
-  color: #888;
-}
-
-.character-face {
-  font-size: 32px;
-}
-
-/* 대사 박스 */
-.dialogue-box {
-  background: #fff;
-  border-radius: 16px;
-  padding: 14px;
-  border: 2px solid #ffc6e6;
-}
-
-#dialogue-text {
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
-
-/* 선택지 */
-.choice-area {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.choice-btn {
-  padding: 10px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  background: #ffe4f2;
-  text-align: left;
-  font-size: 14px;
-}
-
-.choice-btn:hover {
-  background: #ffd1ec;
-}
-
-/* 다음 버튼 */
-.next-btn {
-  margin-top: 10px;
-  width: 100%;
-  padding: 10px 0;
-  border-radius: 12px;
-  border: none;
-  background: #ff9acb;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-/* =========================
-   결과 화면
-========================= */
-.result-section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffffee;
-  padding: 24px;
-  border-radius: 20px;
-  width: min(360px, 90vw);
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.restart-btn {
-  margin-top: 12px;
-  width: 100%;
-  padding: 10px 0;
-  border-radius: 12px;
-  border: none;
-  background: #ff9acb;
-  color: white;
-  cursor: pointer;
-}
-
-/* =========================
-   📱 모바일 전용 조정
-========================= */
-@media (max-width: 768px) {
-  .game-container {
-    width: 80vw;        /* ⭐ 모바일 크기 조절은 여기 */
-    max-width: 340px;
-    margin-left: 0;     /* 오른쪽 밀기 해제 */
-    transform: translateY(20px);
-    padding: 16px;
-  }
-
-  #dialogue-text {
-    font-size: 16px;
-  }
-
-  .choice-btn {
-    font-size: 15px;
-    padding: 12px;
-  }
-
-  .next-btn {
-    font-size: 15px;
-    padding: 12px 0;
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
