@@ -114,8 +114,8 @@ body {
 /* ✅ 📱 모바일에서는 크게 + 가운데 (오른쪽 밀기 해제) */
 @media (max-width: 768px) {
   .game-container {
-    width: 92vw;
-    max-width: 520px;
+    width: 80vw;
+    max-width: 360px;
     margin-left: 0;            /* ⭐ 모바일에서 오른쪽 밀기 해제 */
     padding: 24px;
     transform: translateY(20px); /* 모바일도 살짝 아래(원하면 0px로 바꿔도 됨) */
@@ -136,3 +136,4 @@ body {
     padding: 12px 0;
   }
 }
+
