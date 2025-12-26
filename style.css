@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: url("background.png"); /* 이미지 파일 이름 */
+  background-size: cover; /* 화면에 꽉 차게 */
+  background-position: center; /* 중앙 기준 */
+  background-repeat: no-repeat; /* 반복 없음 */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 420px;
+  background: #ffffffcc;
+  border-radius: 20px;
+  padding: 20px;
+
+  margin-left: 700px; /* ⭐ 이 줄 추가 */
+}
+
+.character-area {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.character-name {
+  font-size: 14px;
+  color: #888;
+}
+
+.character-face {
+  font-size: 32px;
+}
+
+.dialogue-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  border: 2px solid #ffc6e6;
+}
+
+#dialogue-text {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.choice-area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice-btn {
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #ffe4f2;
+  text-align: left;
+  transition: 0.1s;
+}
+
+.choice-btn:hover {
+  transform: translateY(-1px);
+  background: #ffd1ec;
+}
+
+.next-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 12px;
+  border: none;
+  background: #ff9acb;
+  color: white;
+  cursor: pointer;
+}
+
+.result-section {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffffee;
+  padding: 24px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+}
