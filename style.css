@@ -125,7 +125,7 @@ body {
     width: 60vw;        /* ⭐ 모바일 크기 조절은 여기 */
     max-width: 340px;
     margin-left: 0;     /* 오른쪽 밀기 해제 */
-    transform: translateY(20px);
+    transform: translateY(10px);
     padding: 16px;
   }
 
@@ -143,4 +143,5 @@ body {
     padding: 12px 0;
   }
 }
+
 
